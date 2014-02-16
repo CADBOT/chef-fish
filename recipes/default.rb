@@ -11,8 +11,6 @@ remote_file 'fish_tarball' do
 end
 
 # required to compile fish from source
-#package 'make'
-#package 'g++'
 package 'build-essential' do
   not_if do ::File.exists?('/usr/bin/fish') end
 end
